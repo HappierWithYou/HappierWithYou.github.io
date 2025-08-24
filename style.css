@@ -1,0 +1,141 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: "Sriracha", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    background-color: #FCE9F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+.highlight, .main{
+    height: 100px;
+    width: 800px;
+    background-color: white;
+    border-radius: 50px;
+    border-width: 5px;
+    border-color: pink;
+    border-style: solid;
+}
+.main{
+    height: 800px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+.main-container h5{
+    color: rgb(184, 74, 92);
+}
+.highlight{
+    color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    white-space: nowrap;
+    padding: 0 20px;
+}
+.main-picture{
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-picture img{
+    height: 300px;
+    width: 200px;
+    border-color: pink whitesmoke whitesmoke pink;
+    border-style: inset;
+    border-width: 10px;
+}
+.password-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 700px;
+    align-items: center;
+}
+.password-type{
+    background-color: pink;
+    border-radius: 45px;
+    width: 500px;
+    height: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.password-box-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 20px;
+    width: 450px;
+    justify-items: center;
+    height: 600px;
+}
+.password-box{
+    display: flex;
+    background-color: pink;
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.password-box:hover{
+    transform: scale(1.1);
+}
+.password-box:active{
+    transform: scale(0.95);
+}
+.envolope{
+    background-color: pink;
+    border-radius: 20px;
+    height: 850px;
+    width: 850px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    flex-direction: column;
+}
+.poem-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    border-radius: 10px;
+    border-style: double;
+    border-color: rgba(255,255,255,0.5);
+    border-width: 10px;
+    padding: 60px;
+}
+.envolope h5{
+    position: absolute;
+    color: rgb(184, 74, 92);
+    font-weight: 100;
+    font-size: 20px;
+    bottom: 20px;
+}
