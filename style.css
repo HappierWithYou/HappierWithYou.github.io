@@ -16,7 +16,7 @@ body{
     flex-direction: column;
     gap: 15px;
     align-items: center;
-    height: 80%;
+    height: 75%;
     justify-content: center;
 }
 .highlight, .main{
@@ -39,6 +39,8 @@ body{
 }
 .main-container h5{
     color: rgb(184, 74, 92);
+    position: absolute;
+    bottom: -15px;
 }
 .highlight{
     color: pink;
@@ -142,3 +144,4 @@ body{
     bottom: 20px;
 
 }
+
