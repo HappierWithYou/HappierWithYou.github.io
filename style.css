@@ -1,12 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 html,body{
-    height: 100%;
+    height: 100vh;
     width: 100%;
     font-family: "Sriracha", cursive;
     font-weight: 400;
     font-style: normal;
+    background-color: #FCE9F1;
+    overflow-x: hidden;
 }
 body{
-    background-color: #FCE9F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page{
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,134 +27,190 @@ body{
 .main-container{
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    height: 75%;
-    justify-content: center;
-}
-.highlight, .main{
-    height: 100px;
-    width: 800px;
-    background-color: white;
-    border-radius: 50px;
-    border-width: 5px;
-    border-color: pink;
-    border-style: solid;
-}
-.main{
-    height: 800px;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 20px;
-}
-.main-container h5{
-    color: rgb(184, 74, 92);
-    position: absolute;
-    bottom: -15px;
+    gap: 10px;
 }
 .highlight{
+    width: 100%;
+    max-width: 800px;
+    min-height: 80px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 25px;
+    border: solid;
     color: pink;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 40px;
-    white-space: nowrap;
-    padding: 0 20px;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(18px , 4vw , 40px);
+    flex-wrap: nowrap;
+}
+.main{
+   display: flex;
+   flex-direction: row;
+   gap: 30px;
+   width: 100%;
+   max-width: 800px;
+   min-height: 600px;
+   padding: 20px;
 }
 .main-picture{
-    height: 700px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 20px;
+    justify-content: center;
     align-items: center;
 }
 .main-picture img{
-    height: 300px;
-    width: 200px;
-    border-color: pink whitesmoke whitesmoke pink;
-    border-style: inset;
-    border-width: 10px;
+    height: 200px;
+    border: ridge;
+    border-width: 8px;
+    border-color: pink;
 }
 .password-container{
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 20px;
-    height: 700px;
+    justify-content: center;
     align-items: center;
 }
 .password-type{
-    background-color: pink;
-    border-radius: 45px;
-    width: 500px;
-    height: 100px;
-    color: white;
+    background-color: white;
+    border-radius: 25px;
+    color: pink;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    min-height: 60px;
+    padding: 15px;
     font-weight: bold;
-    font-size: 40px;
+    font-size: clamp(16px , 3vw , 24px);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .password-box-grid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4,1fr);
-    gap: 20px;
-    width: 450px;
-    justify-items: center;
-    height: 600px;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(4 , 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
 }
 .password-box{
-    display: flex;
     background-color: pink;
-    height: auto;
-    width: 100%;
-    border-radius: 20px;
     color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: clamp(24px , 36px , 48px);
+    cursor: pointer;
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
-    font-size: 50px;
-    cursor: pointer;
+    align-items: center;
+    min-height: 60px;
     transition: all 0.3s ease;
+    flex-wrap: nowrap;
 }
 .password-box:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .password-box:active{
     transform: scale(0.95);
 }
+.main-container h5 {
+    color: rgb(184, 74, 92);
+    text-align: center;
+    font-size: clamp(14px, 2.5vw, 18px);
+}
 .envolope{
-    background-color: pink;
-    border-radius: 20px;
-    height: 850px;
-    width: 850px;
     display: none;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
     flex-direction: column;
+    background-color: pink;
 }
 .poem-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    flex-direction: column;
+    background-color: pink;
+    text-align: center;
+    line-height: 2.5;
     border-radius: 10px;
-    border-style: double;
-    border-color: rgba(255,255,255,0.5);
-    border-width: 10px;
-    padding: 60px;
+    align-items: center;
+    justify-content: center;
+    border: 5px double rgba(255,255,255,0.5);
+    padding: 30px;
+    color: white;
 }
-.envolope h5{
-    position: absolute;
-    color: rgb(184, 74, 92);
-    font-weight: 100;
-    font-size: 20px;
-    bottom: 20px;
+@media (min-width: 768px) {
+    .main {
+        flex-direction: row;
+        justify-content: space-evenly;
+        min-height: 700px;
+    }
 
+    .main-picture {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .main-picture img {
+        width: 180px;
+        height: 240px;
+    }
+
+    .password-box-grid {
+        max-width: 350px;
+        height: 450px;
+    }
 }
 
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .main-picture img {
+        width: 200px;
+        height: 300px;
+    }
+
+    .password-box-grid {
+        max-width: 400px;
+        height: 500px;
+    }
+
+    .poem-container {
+        padding: 60px 40px;
+    }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+    .main-container {
+        padding: 10px;
+    }
+
+    .highlight {
+        border-radius: 20px;
+        min-height: 70px;
+    }
+
+    .main {
+        border-radius: 20px;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .main-picture img {
+        width: 120px;
+        height: 160px;
+    }
+
+    .password-box-grid {
+        height: 300px;
+        gap: 10px;
+    }
+
+    .password-box {
+        border-radius: 10px;
+        min-height: 50px;
+    }
+}
