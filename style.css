@@ -1,216 +1,105 @@
-*{
+html,body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: "Mali", cursive;
+    background-color: rgb(255, 218, 224);
 }
-html,body{
-    height: 100vh;
-    width: 100%;
-    font-family: "Sriracha", cursive;
-    font-weight: 400;
-    font-style: normal;
-    background-color: #FCE9F1;
-    overflow-x: hidden;
-}
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.page{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#page2{
+    display: none;
 }
 .main-container{
     display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 218, 224);
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
 .highlight{
-    width: 100%;
-    max-width: 800px;
-    min-height: 80px;
-    padding: 15px;
+    width: 80%;
     background-color: white;
+    color: pink;
     border-radius: 25px;
     border: solid;
-    color: pink;
+    border-width: 3px;
+    margin: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    font-size: clamp(18px , 4vw , 40px);
-    flex-wrap: nowrap;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 3.5vmin;
+    padding: 15px;
 }
 .main{
-   display: flex;
-   flex-direction: row;
-   gap: 30px;
-   width: 100%;
-   max-width: 800px;
-   min-height: 600px;
-   padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80%;
 }
 .main-picture{
     display: flex;
     flex-direction: column;
+    height: 70vh;
     gap: 20px;
     justify-content: center;
-    align-items: center;
 }
 .main-picture img{
-    height: 200px;
-    border: ridge;
-    border-width: 8px;
+    border-style: ridge;
     border-color: pink;
+    border-width: 10px;
+    height: 45%;
 }
 .password-container{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    gap: 20px;
+    gap: 10px; 
+    align-items: center;
     justify-content: center;
     align-items: center;
+    height: 70vh;
+    width: auto;
 }
 .password-type{
-    background-color: white;
-    border-radius: 25px;
-    color: pink;
-    padding: 20px;
-    width: 100%;
-    max-width: 400px;
-    min-height: 60px;
-    padding: 15px;
-    font-weight: bold;
-    font-size: clamp(16px , 3vw , 24px);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+    color: pink;
+    font-weight: bold;
+    width: 100%;
+    height: 10vh;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vmin;
+    font-weight: bold;
 }
 .password-box-grid{
     display: grid;
-    grid-template-columns: repeat(3 , 1fr);
-    grid-template-rows: repeat(4 , 1fr);
-    gap: 15px;
-    width: 100%;
-    max-width: 300px;
-    height: 400px;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
 }
 .password-box{
     background-color: pink;
-    color: white;
     border-radius: 20px;
-    font-weight: bold;
-    font-size: clamp(24px , 36px , 48px);
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    align-items: center;
-    min-height: 60px;
-    transition: all 0.3s ease;
-    flex-wrap: nowrap;
-}
-.password-box:hover{
-    transform: scale(1.05);
-}
-.password-box:active{
-    transform: scale(0.95);
-}
-.main-container h5 {
-    color: rgb(184, 74, 92);
-    text-align: center;
-    font-size: clamp(14px, 2.5vw, 18px);
-}
-.envolope{
-    display: none;
-    flex-direction: column;
-    background-color: pink;
-}
-.poem-container{
-    background-color: pink;
-    text-align: center;
-    line-height: 2.5;
-    border-radius: 10px;
-    align-items: center;
-    justify-content: center;
-    border: 5px double rgba(255,255,255,0.5);
-    padding: 30px;
     color: white;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 14vmin;
+    width: 14vmin;
 }
-@media (min-width: 768px) {
-    .main {
-        flex-direction: row;
-        justify-content: space-evenly;
-        min-height: 700px;
+@media(max-width: 720px){
+    .main-picture{
+        width: 32.256944vw;
+        height: auto;
     }
-
-    .main-picture {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .main-picture img {
-        width: 180px;
-        height: 240px;
-    }
-
-    .password-box-grid {
-        max-width: 350px;
-        height: 450px;
-    }
-}
-
-/* Desktop Styles */
-@media (min-width: 1024px) {
-    .main-picture img {
-        width: 200px;
-        height: 300px;
-    }
-
-    .password-box-grid {
-        max-width: 400px;
-        height: 500px;
-    }
-
-    .poem-container {
-        padding: 60px 40px;
-    }
-}
-
-/* Mobile Portrait */
-@media (max-width: 480px) {
-    .main-container {
-        padding: 10px;
-    }
-
-    .highlight {
-        border-radius: 20px;
-        min-height: 70px;
-    }
-
-    .main {
-        border-radius: 20px;
-        padding: 15px;
-        gap: 20px;
-    }
-
-    .main-picture img {
-        width: 120px;
-        height: 160px;
-    }
-
-    .password-box-grid {
-        height: 300px;
-        gap: 10px;
-    }
-
-    .password-box {
-        border-radius: 10px;
-        min-height: 50px;
+    .main-picture img{
+        height: auto;
     }
 }
