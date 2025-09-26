@@ -94,9 +94,44 @@ html,body{
     cursor: pointer;
     height: 14vmin;
     width: 14vmin;
+    transition: 0.1s ease;
+}
+.password-box:hover:active{
+    transform: scale(0.95);
+}
+.password-box:hover{
+    transform: scale(1.05);
 }
 #page1 h5{
     font-size: 3vmin;
+}
+.envolope{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+}
+.poem-container{
+    border-radius: 1px;
+    border-style: dotted;
+    padding: 25px;
+    border-radius: 25px;
+    border-color: white;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#page2 a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    background-color: pink;
+    border-radius: 15px;
 }
 @media(max-width: 720px){
     .main-picture{
