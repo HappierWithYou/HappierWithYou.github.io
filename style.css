@@ -37,6 +37,7 @@ html,body{
     flex-direction: row;
     justify-content: space-evenly;
     width: 80%;
+    gap: 10px;
 }
 .main-picture{
     display: flex;
@@ -48,7 +49,7 @@ html,body{
 .main-picture img{
     border-style: ridge;
     border-color: pink;
-    border-width: 10px;
+    border-width: 1vmin;
     height: 45%;
 }
 .password-container{
@@ -72,7 +73,7 @@ html,body{
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-size: 3vmin;
+    font-size: 3.5vmin;
     font-weight: bold;
 }
 .password-box-grid{
@@ -88,7 +89,7 @@ html,body{
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 32px;
+    font-size: 3vmin;
     font-weight: bold;
     cursor: pointer;
     height: 14vmin;
