@@ -139,6 +139,7 @@ html,body{
     font-weight: bold;
     font-size: 5vmin;
     box-sizing: border-box;
+    user-select: none;
 }
 .slide2{
     position: relative;
@@ -173,3 +174,4 @@ html,body{
         transform: translateY(0);
     }
 }
+
