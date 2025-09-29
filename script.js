@@ -42,3 +42,15 @@ function nextPage(page){
     document.getElementById(`page${page-1}`).style.display = "none";
     document.getElementById(`page${page}`).style.display = "flex";
 }
+
+function slide() {
+    const slides = document.querySelectorAll('.slide');
+    
+    slides.forEach(function(slide) {
+        if (slide.classList.contains('active')) {
+            slide.classList.remove('active');
+        } else {
+            slide.classList.add('active');
+        }
+    });
+}
