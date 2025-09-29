@@ -157,7 +157,7 @@ html,body{
 .slide h1{
     margin: 5px 0;
 }
-.card:hover .slide1 , .card:hover .slide2{
+.active{
     transform: translateY(0);
 }
 @media(max-width: 720px){
@@ -169,9 +169,3 @@ html,body{
         height: auto;
     }
 }
-@media (hover:none){
-    .card:active .slide1 , .card:active .slide2{
-        transform: translateY(0);
-    }
-}
-
