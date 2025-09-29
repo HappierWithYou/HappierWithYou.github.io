@@ -113,18 +113,6 @@ html,body{
     height: 100vh;
     flex-direction: column;
 }
-.poem-container{
-    border-radius: 1px;
-    border-style: dotted;
-    padding: 25px;
-    border-radius: 25px;
-    border-color: white;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.75vmin;
-}
 #page2 a{
     text-decoration: none;
     font-weight: bold;
@@ -133,6 +121,43 @@ html,body{
     margin: 10px;
     background-color: pink;
     border-radius: 15px;
+}
+.slide{
+    width: 300px;
+    height: 200px;
+    transition: 0.7s;
+}
+.slide1{
+    position: relative;
+    background-color: pink;
+    transform: translateY(100px);
+    z-index: 1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 5vmin;
+    box-sizing: border-box;
+}
+.slide2{
+    position: relative;
+    background-color: white;
+    transform: translateY(-100px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    font-size: 0.8vmin;
+    color: pink;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.slide h1{
+    margin: 5px 0;
+}
+.card:hover .slide1 , .card:hover .slide2{
+    transform: translateY(0);
 }
 @media(max-width: 720px){
     .main-picture{
@@ -143,5 +168,3 @@ html,body{
         height: auto;
     }
 }
-
-
