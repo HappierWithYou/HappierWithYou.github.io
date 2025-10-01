@@ -3,53 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Better together</title>
+    <title>UnlockMyHeart</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Itim&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Sriracha&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main-container page" id="page1">
-        <div class="highlight">❤️I need you like a heart needs a beat.❤️</div>
-        <div class="main">
-            <div class="main-picture">
-                <img src="img6.jpg" alt="picture1">
-                <img src="img5.jpg" alt="picture2">
+    <div class="page-container">
+        <div class="page page1" id="page1">
+            <div class="heart-icon">❤️</div>
+            <div class="bar">
+                <h1>Please enter the code to unlock my heart.</h1>
             </div>
-            <div class="password-container">
-                <div class="password-type" id="password">Enter Our Password</div>
-                <div class="password-box-grid">
-                    <div class="password-box password-box1" onclick="writeAtype(1)">1</div>
-                    <div class="password-box password-box2" onclick="writeAtype(2)">2</div>
-                    <div class="password-box password-box3" onclick="writeAtype(3)">3</div>
-                    <div class="password-box password-box4" onclick="writeAtype(4)">4</div>
-                    <div class="password-box password-box5" onclick="writeAtype(5)">5</div>
-                    <div class="password-box password-box6" onclick="writeAtype(6)">6</div>
-                    <div class="password-box password-box7" onclick="writeAtype(7)">7</div>
-                    <div class="password-box password-box8" onclick="writeAtype(8)">8</div>
-                    <div class="password-box password-box9" onclick="writeAtype(9)">9</div>
-                    <div class="password-box password-box10" onclick="writeAtype('*')">*</div>
-                    <div class="password-box password-box11" onclick="writeAtype(0)">0</div>
-                    <div class="password-box password-box12" onclick="writeAtype('10')">clear</div>
-                </div>
+            <div class="password-input">
+                <input type="type" maxlength="1" class="code-input" id="input-2" pattern="[0-9]" inputmode="numeric" >
+                <input type="type" maxlength="1" class="code-input" id="input-3" pattern="[0-9]" inputmode="numeric" >
+                <input type="type" maxlength="1" class="code-input" id="input-1" pattern="[0-9]" inputmode="numeric" >
+                <input type="type" maxlength="1" class="code-input" id="input-4" pattern="[0-9]" inputmode="numeric" >
             </div>
-        </div>
-        <h5>My date and month of birth is password </h5>
-    </div>
-    <div class="envolope page" id="page2">
-        <div class="card">
-            <div class="slide slide1" onclick="slide()">
-                Poem *-*
-            </div>
-            <div class="slide slide2">
-                <h1>ฉันอยากชมลมฟ้าเวหารัก</h1>
-                <h1>กับน้องนักทูนหัวตัวถวิล</h1>
-                <h1>ถึงวันนั้นจันทราแลดาวริน</h1>
-                <h1>ไม่เปล่งกลิ่นลินลาเหมือนคราใด</h1>
+            <button class="unlock-btn" id="unlockBtn" disabled>❤️unlock❤️</button>
+            <div class="key-grid">
+                <div class="key" data-key="1">1</div>
+                <div class="key" data-key="2">2</div>
+                <div class="key" data-key="3">3</div>
+                <div class="key" data-key="4">4</div>
+                <div class="key" data-key="5">5</div>
+                <div class="key" data-key="6">6</div>
+                <div class="key" data-key="7">7</div>
+                <div class="key" data-key="8">8</div>
+                <div class="key" data-key="9">9</div>
+                <div class="key" data-key="backspace">⌫</div>
+                <div class="key" data-key="0">0</div>
+                <div class="key" data-key="clear">C</div>
             </div>
         </div>
-        <a href="">goback</a>
+        <div class="page page2" id="page2">
+            <div class="heart-icon">❤️</div>
+            <h1>เก่งมาก ๆ เลยค่ะ <br>ที่รักของเค้า</h1>
+            <div class="heart-icon">❤️</div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
